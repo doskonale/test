@@ -5,3 +5,9 @@ class Product(models.Model):
     created = models.DateTimeField(auto_now_add=True, blank=False, null=True)
     def __str__(self):
         return self.name   
+
+class Project(models.Model):
+    name = models.CharField(max_length=30, blank=False, null=True)
+    country = models.CharField(max_length=30, blank=False, null=True)
+    def __str__(self):
+        return self.name 
